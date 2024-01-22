@@ -1,0 +1,82 @@
+[versions]
+# You also need to bump the version of ksp, anvil, compose
+kotlin-general = "1.9.22" # https://kotlinlang.org/docs/releases.html#release-details
+kotlin-immutable-collections = "0.3.7" # https://github.com/Kotlin/kotlinx.collections.immutable/releases
+kotlinx = "1.7.3" # https://github.com/Kotlin/kotlinx.coroutines/releases
+ksp = "1.9.22-1.0.16" # https://github.com/google/ksp/releases
+anvil = "2.4.8" # https://github.com/square/anvil/releases
+android-gradle = "8.2.1" # https://developer.android.com/studio/releases/gradle-plugin
+compose-material = "1.5.4" # https://developer.android.com/jetpack/androidx/releases/compose#versions
+compose-foundation = "1.5.4" # https://developer.android.com/jetpack/androidx/releases/compose#versions
+compose-ui = "1.5.4" # https://developer.android.com/jetpack/androidx/releases/compose#versions
+compose-compiler = "1.5.8" # https://developer.android.com/jetpack/androidx/releases/compose#versions
+serialization-json = "1.6.2" # https://github.com/Kotlin/kotlinx.serialization/releasesm
+dagger = "2.50" # https://github.com/google/dagger/releases
+timber = "5.0.1" # https://github.com/JakeWharton/timber/releases
+ktx-activity = "1.8.2" # https://developer.android.com/jetpack/androidx/releases/activity
+annotations = "1.7.1" # https://developer.android.com/jetpack/androidx/releases/annotation
+appcompat = "1.6.1" # https://developer.android.com/jetpack/androidx/releases/appcompat
+decompose = "3.0.0-alpha04" # https://github.com/arkivanov/Decompose/releases
+essenty = "2.0.0-alpha02" # https://github.com/arkivanov/Essenty/releases
+
+[libraries]
+# Gradle - Core
+android-gradle = { module = "com.android.tools.build:gradle", version.ref = "android-gradle" }
+kotlin-ksp-gradle = { module = "com.google.devtools.ksp:com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
+
+kotlin-annotation-processing = { module = "org.jetbrains.kotlin:kotlin-annotation-processing-embeddable", version.ref = "kotlin-general" }
+kotlin-compiler = { module = "org.jetbrains.kotlin:kotlin-compiler-embeddable", version.ref = "kotlin-general" }
+kotlin-gradle = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin-general" }
+kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlin-general" }
+kotlin-stdlib-jdk8 = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk8", version.ref = "kotlin-general" }
+
+kotlin-coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinx" }
+
+kotlin-serialization-gradle = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "kotlin-general" }
+kotlin-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "serialization-json" }
+
+kotlin-immutable-collections = { module = "org.jetbrains.kotlinx:kotlinx-collections-immutable", version.ref = "kotlin-immutable-collections" }
+
+# UI
+compose-activity = { module = "androidx.activity:activity-compose", version.ref = "ktx-activity" }
+compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose-ui" }
+compose-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose-ui" }
+compose-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "compose-foundation" }
+compose-material = { module = "androidx.compose.material:material", version.ref = "compose-material" }
+
+# Dependency Injection
+dagger = { module = "com.google.dagger:dagger", version.ref = "dagger" }
+dagger-kapt = { module = "com.google.dagger:dagger-compiler", version.ref = "dagger" }
+
+# Dependency Injection - Anvil
+square-anvil-annotations = { module = "com.squareup.anvil:annotations", version.ref = "anvil" }
+square-anvil-compiler-api = { module = "com.squareup.anvil:compiler-api", version.ref = "anvil" }
+square-anvil-compiler-core = { module = "com.squareup.anvil:compiler", version.ref = "anvil" }
+square-anvil-compiler-utils = { module = "com.squareup.anvil:compiler-utils", version.ref = "anvil" }
+square-anvil-gradle = { module = "com.squareup.anvil:gradle-plugin", version.ref = "anvil" }
+
+# Bug report dependencies
+timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
+
+# Utils
+annotations = { module = "androidx.annotation:annotation", version.ref = "annotations" }
+appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
+
+decompose = { module = "com.arkivanov.decompose:decompose", version.ref = "decompose" }
+decompose-jetpack = { module = "com.arkivanov.decompose:extensions-compose", version.ref = "decompose" }
+
+essenty-lifecycle = { module = "com.arkivanov.essenty:lifecycle", version.ref = "essenty" }
+essenty-lifecycle-coroutines = { module = "com.arkivanov.essenty:lifecycle-coroutines", version.ref = "essenty" }
+
+[bundles]
+decompose = ["decompose", "decompose-jetpack"]
+essenty = ["essenty-lifecycle", "essenty-lifecycle-coroutines"]
+
+[plugins]
+android-app = { id = "com.android.application", version.ref = "android-gradle" }
+android-lib = { id = "com.android.library", version.ref = "android-gradle" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin-general" }
+kotlin-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin-general" }
+square-anvil = { id = "com.squareup.anvil", version.ref = "anvil" }
+
