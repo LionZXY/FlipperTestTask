@@ -1,6 +1,6 @@
 package com.lionzxy.flippertesttask.bottombar.api
 
-import androidx.compose.foundation.layout.fillMaxSize
+import giandroidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier

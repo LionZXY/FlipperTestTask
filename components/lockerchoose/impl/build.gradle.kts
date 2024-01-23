@@ -15,4 +15,6 @@ dependencies {
     implementation(libs.compose.foundation)
     implementation(libs.compose.material)
     implementation(libs.decompose)
+
+    implementation(libs.kotlin.immutable.collections)
 }
