@@ -1,4 +1,4 @@
-package com.lionzxy.flipper atesttask.bottombar.api
+package com.lionzxy.flippertesttask.bottombar.api
 
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
