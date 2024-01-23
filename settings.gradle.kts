@@ -22,5 +22,10 @@ include(
     ":instances:app",
     ":components:core:di",
     ":components:core:log",
-    ":components:singleactivity"
+    ":components:core:decompose",
+    ":components:singleactivity",
+    ":components:bottombar:api",
+    ":components:bottombar:impl",
+    ":components:lockerchoose:api",
+    ":components:lockerchoose:impl"
 )
