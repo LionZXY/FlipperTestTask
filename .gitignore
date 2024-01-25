@@ -4,8 +4,6 @@
 /.idea/**
 /.fleet/**
 
-*.apk
-
 # IDEA/Android Studio Ignore exceptions
 !/.idea/codeStyles
 # Project icon
