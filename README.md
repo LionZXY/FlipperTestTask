@@ -25,7 +25,7 @@ The important thing is that there are essentially two screens - one is the key s
 
 Alternatively, you can install the ready app solution on your phone [from here](docs/app-internal.apk) and check it. There might be bugs and it's not a perfect solution :)
 
-# Полезные материалы
+# Useful materials
 
 - Decompose documentation: https://arkivanov.github.io/Decompose/
 - Main project repository: https://github.com/flipperdevices/Flipper-Android-App
